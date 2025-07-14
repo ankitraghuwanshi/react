@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <div id="root"></div>
+    <script>
+        //select root element
+        const rootElement=document.getElementById("root")
+
+        //create element using react
+        //React.createElement(tag, property, children element/text)
+        const headingElement=React.createElement("h1", {
+            style:{
+                color:"red"
+            },
+            dataName:"name"
+        }, "hello world")
+
+        //render this to the dom using ReactDOM
+        //ReactDOM.render(what-render, where-render)
+        ReactDOM.render(headingElement, rootElement)
+    </script>
+</body>
+</html>
