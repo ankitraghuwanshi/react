@@ -17,8 +17,8 @@
 
     <script type="text/babel">
       const root = document.getElementById("root")
-      function Counter() {
-        const [count, setCount] = React.useState(0)
+      function Counter({ defaultValue }) {
+        const [count, setCount] = React.useState(defaultValue)
         const handleIncreaseCount = () => {
           setCount(count + 1)
         }
@@ -40,9 +40,9 @@
       function Parent(){
         return(
             <div>
-                <Counter/>    
-                <Counter/>
-                <Counter/>
+                <Counter defaultValue={10}/>    
+                <Counter defaultValue={20}/>
+                <Counter defaultValue={30}/>
             </div>
         )
       }
