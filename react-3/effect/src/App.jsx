@@ -1,13 +1,11 @@
-import './App.css'
-import Movie from './Movie'
+import "./App.css";
+import User from "./User";
+
 
 function App() {
-
-  return (
-    <>
-      <Movie />
-    </>
-  )
+    return (
+        <User/>
+    );
 }
 
-export default App
+export default App;
