@@ -9,6 +9,7 @@ function InputTodo({setTodoList}) {
     const addTodo=()=>{
         //add this current value to the todolist
         setTodoList((todoListPrevious)=>{   //feature:- callback contain todolist
+            //create new array change reference value ,so re-render happen
             return [...todoListPrevious, value]
         })
         //make input as ""
