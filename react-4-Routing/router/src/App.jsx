@@ -1,5 +1,5 @@
 import './App.css'
-import {Routes, Route, Link} from 'react-router-dom'
+import {Routes, Route, Link, Navigate} from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Product from './pages/Product'
@@ -13,6 +13,8 @@ function Router(){
       <Route path='/about' element={<About/>}></Route>
       <Route path='/product' element={<Product/>}></Route>
       <Route path='/user/:id' element={<User/>}></Route>
+      {/* Whenever we land here, we should be redirected to the home page */}
+      <Route path='/restricted' element={<Navigate to="/"/>}></Route>
       <Route path='*' element={<NotFound/>}></Route>
     </Routes>
   )
