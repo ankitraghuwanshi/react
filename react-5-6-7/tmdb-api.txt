@@ -1,0 +1,2 @@
+api-key = "00844fd8a0fd37ceb87c43614341f337",
+API Read Access Token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMDg0NGZkOGEwZmQzN2NlYjg3YzQzNjE0MzQxZjMzNyIsIm5iZiI6MTcyNzU5MzI3MS44Miwic3ViIjoiNjZmOGZiMzcxNDBmYmY2YTFhNWY1ZjlhIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.t6scKeOM87u9xrGldMm7aTI-losichOsPHTLIpVMeHo"
