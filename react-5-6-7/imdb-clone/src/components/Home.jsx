@@ -1,18 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Banner from './Banner'
 import Movies from './Movies'
+import axios from 'axios'
+
+const MOVIE_API_ENDPOINT ="https://api.themoviedb.org/3/trending/movie/day?api_key=00844fd8a0fd37ceb87c43614341f337"
 
 function Home() {
-  const [movies, setMovies]=useState([
-    {url:"https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68", title:"Movie 1"},
-    {url:"https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68", title:"Movie 2"},
-    {url:"https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68", title:"Movie 3"},
-    {url:"https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68", title:"Movie 4"},
-    {url:"https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68", title:"Movie 5"}
-  ])
+
+  const [movies, setMovies]=useState([])
+
+  useEffect(()=>{
+    axios.get(MOVIE_API_ENDPOINT)
+        .then((res)=>{
+          const results=res.data.results
+          console.log(results)
+          if(results){
+            setMovies(results)
+          }
+        })
+         .catch((error)=>console.log(error))
+  },[])
+
   return (
     <div>
-      <Banner/>
+      <Banner name={movies[0]?.title} url={movies[0]?.backdrop_path}/>
       <div className='text-2xl font-bold text-center m-5'>
         Trending Movie
       </div>

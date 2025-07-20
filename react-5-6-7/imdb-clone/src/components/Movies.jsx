@@ -6,7 +6,7 @@ function Movies({movies}) {
     <div className='flex justify-evenly flex-wrap gap-8'>
       {movies.map((moviesObj)=>{
         return(
-          <Movie key={moviesObj.title} url={moviesObj.url} title={moviesObj.title}/>
+          <Movie key={moviesObj.title} url={moviesObj.poster_path} title={moviesObj.title}/>
         )
       })}
     </div>
