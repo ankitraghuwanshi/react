@@ -3,7 +3,7 @@ import React from 'react'
 function Banner({name,url}) {
   return (
         <div
-            className=" h-[20vh] md:h-[60vh] bg-cover bg-center flex items-end "
+            className=" h-[20vh] md:h-[60vh] bg-cover bg-center flex items-end object-cover"
             style={{
                 backgroundImage:
                 `url(https://image.tmdb.org/t/p/original/${url})`
