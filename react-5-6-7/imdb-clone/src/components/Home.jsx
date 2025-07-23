@@ -28,7 +28,7 @@ function Home() {
   },[page])
 
   return (
-    <div>
+    <div className='flex flex-col gap-10'>
       <Banner name={movies[0]?.title} url={movies[0]?.backdrop_path}/>
       <div className='text-2xl font-bold text-center m-5'>
         Trending Movie
