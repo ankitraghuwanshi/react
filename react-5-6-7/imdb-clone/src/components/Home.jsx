@@ -4,15 +4,11 @@ import Movies from './Movies'
 import axios from 'axios'
 import Pagination from './Pagination'
 
-export const LOCALSTORAGE_KEY ="movies"
-
 const MOVIE_API_ENDPOINT=(page) =>`https://api.themoviedb.org/3/trending/movie/day?api_key=00844fd8a0fd37ceb87c43614341f337&language=en-US&page=${page}`
 
-function Home() {
+function Home({watchList, setWatchList}) {
 
   const [movies, setMovies]=useState([])
-  const watchListInLocalstorage=JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY) || "[]")
-  const [watchList, setWatchList]=useState(watchListInLocalstorage)
   const [page, setPage]=useState(1)
 
   useEffect(()=>{
@@ -29,7 +25,7 @@ function Home() {
 
   return (
     <div className='flex flex-col gap-10'>
-      <Banner name={movies[0]?.title} url={movies[0]?.backdrop_path}/>
+      <Banner name={movies[0]?.title} url={movies[0]?.backdrop_path} type={movies[0]?.media_type} />
       <div className='text-2xl font-bold text-center m-5'>
         Trending Movie
       </div>

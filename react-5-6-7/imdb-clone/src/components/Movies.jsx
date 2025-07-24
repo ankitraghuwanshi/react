@@ -1,6 +1,6 @@
 import React from 'react'
 import Movie from './Movie'
-import { LOCALSTORAGE_KEY } from './Home' 
+import { LOCALSTORAGE_KEY } from '../App' 
 
 function Movies({movies, watchList, setWatchList}) {
 

@@ -3,9 +3,6 @@ import React from 'react'
 function Banner({name,url}) {
   return (
     <>
-        <div className='flex'>
-            <p>type : </p>
-        </div>
         <div
             className="backgroundImage h-[20vh] md:h-[55vh] bg-cover bg-center flex items-end"
             style={{
