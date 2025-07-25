@@ -1,0 +1,11 @@
+1.prop drilling (passing state/prop)
+2.context api 
+
+Q.         context api itself is not a state management solution
+ans.       because we still creating state using useState() to create and manage the state
+problem-   (context api hell)
+solution-  Redux(central state management solution)
+library-1  library-2(over library-1)
+redux      redux-toolkit
+terminal-  npm i @reduxjs/toolkit
+           npm i react-redux
