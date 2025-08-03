@@ -31,3 +31,7 @@ const withTodos = (WrappedComponent) => {
 //     ..React........
 // }
 // export default withTodos(TodoList)
+
+
+//for React functional component we don't use HOC(higher order component)
+// we use hook and custom hook
