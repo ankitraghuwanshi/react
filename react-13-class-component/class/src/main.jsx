@@ -1,0 +1,13 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import AppClass from './components/AppClass.jsx'
+import Counter from './components/Counter.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    {/* <AppClass text1="hello" text2="world"/> */}
+    <Counter/>
+  </StrictMode>,
+)
